@@ -55,7 +55,6 @@
             AnimationPanel.Name = "AnimationPanel";
             AnimationPanel.Size = new Size(795, 183);
             AnimationPanel.TabIndex = 7;
-            AnimationPanel.Paint += AnimationPanel_Paint;
             // 
             // GifPicBox
             // 

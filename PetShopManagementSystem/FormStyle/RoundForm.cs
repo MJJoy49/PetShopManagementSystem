@@ -21,7 +21,7 @@ public class RoundForm
         // Optional: Draw border
         form.Paint += (sender, e) =>
         {
-            using (Pen pen = new Pen(borderColor, 3)) // Adjust color and thickness as needed
+            using (Pen pen = new Pen(borderColor, 5)) // Adjust color and thickness as needed
             {
                 e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
                 e.Graphics.DrawPath(pen, path);

@@ -66,9 +66,6 @@ namespace PetShopManagementSystem.views
             }
         }
 
-        private void AnimationPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
     }
 }
