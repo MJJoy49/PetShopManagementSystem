@@ -28,6 +28,8 @@ namespace PetShopManagementSystem.views
         {
             InitializeComponent();
 
+            RoundForm.roundedForm(this, 40);
+
             // Set initial size and location for AnimationPanel
             AnimationPanel.Size = startSize;
             AnimationPanel.Location = startLocation;
