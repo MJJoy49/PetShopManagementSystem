@@ -30,7 +30,6 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WelcomeForm));
-            LinePanel = new Panel();
             AnimationPanel = new Panel();
             GifPicBox = new PictureBox();
             welcomeLabel = new Label();
@@ -38,14 +37,6 @@
             AnimationPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)GifPicBox).BeginInit();
             SuspendLayout();
-            // 
-            // LinePanel
-            // 
-            LinePanel.BackColor = Color.FromArgb(66, 66, 66);
-            LinePanel.Location = new Point(104, 329);
-            LinePanel.Name = "LinePanel";
-            LinePanel.Size = new Size(833, 15);
-            LinePanel.TabIndex = 8;
             // 
             // AnimationPanel
             // 
@@ -73,8 +64,8 @@
             welcomeLabel.AutoSize = true;
             welcomeLabel.BackColor = Color.Transparent;
             welcomeLabel.Font = new Font("Franklin Gothic Heavy", 19.875F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            welcomeLabel.ForeColor = Color.FromArgb(26, 26, 26);
-            welcomeLabel.Location = new Point(227, 266);
+            welcomeLabel.ForeColor = Color.FromArgb(33, 33, 33);
+            welcomeLabel.Location = new Point(220, 266);
             welcomeLabel.Name = "welcomeLabel";
             welcomeLabel.Size = new Size(612, 66);
             welcomeLabel.TabIndex = 6;
@@ -90,8 +81,7 @@
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
-            ClientSize = new Size(1060, 594);
-            Controls.Add(LinePanel);
+            ClientSize = new Size(1060, 546);
             Controls.Add(AnimationPanel);
             Controls.Add(welcomeLabel);
             FormBorderStyle = FormBorderStyle.None;
@@ -105,8 +95,6 @@
         }
 
         #endregion
-
-        private Panel LinePanel;
         private Panel AnimationPanel;
         private PictureBox GifPicBox;
         private Label welcomeLabel;

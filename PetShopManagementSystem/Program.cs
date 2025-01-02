@@ -12,6 +12,7 @@ namespace PetShopManagementSystem
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new views.WelcomeForm());
+
         }
     }
 }

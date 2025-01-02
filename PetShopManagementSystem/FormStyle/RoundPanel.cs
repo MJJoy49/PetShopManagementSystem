@@ -20,7 +20,7 @@ public class RoundPanel
         // Optional: Draw a border for the panel
         panel.Paint += (sender, e) =>
         {
-            Pen pen = new Pen(Color.Black, 2); // Border color and thickness
+            Pen pen = new Pen(Color.FromArgb(33, 33, 33), 2); // Border color and thickness
             e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
             e.Graphics.DrawPath(pen, path);
         };

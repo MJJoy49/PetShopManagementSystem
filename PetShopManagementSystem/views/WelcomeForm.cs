@@ -20,6 +20,7 @@ namespace PetShopManagementSystem.views
         private int currentStep = 0;
         private float deltaWidth;
         private float deltaX;
+        MainForm mainForm = new MainForm();
 
 
 
@@ -61,11 +62,28 @@ namespace PetShopManagementSystem.views
             else
             {
                 // Stop the timer when the animation is complete
+                
                 timer1.Stop();
-                Application.Exit();
+                this.Hide();
+                mainForm.Show();
             }
         }
 
-       
+
+        //public void ReloadAnimation()
+        //{
+        //    // Reset animation parameters
+        //    currentStep = 0;
+        //    AnimationPanel.Size = startSize;
+        //    AnimationPanel.Location = startLocation;
+
+        //    // Start the timer to animate again
+        //    timer1.Start();
+        //}
+
+        private void WelcomeForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
