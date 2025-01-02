@@ -64,7 +64,7 @@
             welcomeLabel.AutoSize = true;
             welcomeLabel.BackColor = Color.Transparent;
             welcomeLabel.Font = new Font("Franklin Gothic Heavy", 19.875F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            welcomeLabel.ForeColor = Color.FromArgb(33, 33, 33);
+            welcomeLabel.ForeColor = Color.WhiteSmoke;
             welcomeLabel.Location = new Point(220, 266);
             welcomeLabel.Name = "welcomeLabel";
             welcomeLabel.Size = new Size(612, 66);
@@ -80,7 +80,7 @@
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ControlLight;
+            BackColor = Color.FromArgb(33, 33, 33);
             ClientSize = new Size(1060, 546);
             Controls.Add(AnimationPanel);
             Controls.Add(welcomeLabel);

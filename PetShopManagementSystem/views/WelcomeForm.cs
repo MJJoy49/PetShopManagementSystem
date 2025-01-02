@@ -29,7 +29,7 @@ namespace PetShopManagementSystem.views
         {
             InitializeComponent();
 
-            RoundForm.RoundedForm(this, 40, Color.FromArgb(227, 227, 227));
+            RoundForm.RoundedForm(this, 40, Color.FromArgb(33,33,33));
 
             // Set initial size and location for AnimationPanel
             AnimationPanel.Size = startSize;

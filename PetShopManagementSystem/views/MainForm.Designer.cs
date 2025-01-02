@@ -557,7 +557,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Arial Rounded MT Bold", 16.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ButtonFace;
-            label1.Location = new Point(109, 28);
+            label1.Location = new Point(105, 26);
             label1.Name = "label1";
             label1.Size = new Size(333, 50);
             label1.TabIndex = 3;
@@ -565,10 +565,10 @@
             // 
             // pictureBox12
             // 
-            pictureBox12.Image = Properties.Resources.pet_90;
-            pictureBox12.Location = new Point(16, 8);
+            pictureBox12.Image = (Image)resources.GetObject("pictureBox12.Image");
+            pictureBox12.Location = new Point(0, 0);
             pictureBox12.Name = "pictureBox12";
-            pictureBox12.Size = new Size(86, 78);
+            pictureBox12.Size = new Size(99, 91);
             pictureBox12.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox12.TabIndex = 2;
             pictureBox12.TabStop = false;
