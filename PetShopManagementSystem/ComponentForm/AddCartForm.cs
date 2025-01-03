@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PetShopManagementSystem.views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,16 @@ namespace PetShopManagementSystem.ComponentForm
         public AddCartForm()
         {
             InitializeComponent();
+        }
+
+
+        int updateCartCount;
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            MainForm.addCartCount--;
+            updateCartCount = MainForm.addCartCount;
+            string addCartNumber = updateCartCount.ToString();
+            MainForm.forAddcartLabel.countAddCart.Text = addCartNumber;
         }
     }
 }

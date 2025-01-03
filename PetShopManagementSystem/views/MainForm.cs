@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,13 +15,24 @@ namespace PetShopManagementSystem.views
 {
     public partial class MainForm : Form
     {
+        public static MainForm forAddcartLabel;
+        public static int addCartCount = 0;
+
+
         public MainForm()
         {
             InitializeComponent();
+
             addUserControl(userProfileForm);
             RoundPanel.roundedPanel(leftPanel, 40);
 
+            forAddcartLabel = this;
+
+
         }
+
+
+
 
         private void closeBtn_Click(object sender, EventArgs e)
         {
@@ -36,11 +48,6 @@ namespace PetShopManagementSystem.views
         {
 
         }
-
-
-
-
-
 
         //--------------------- Component form Change-----------------------
 
@@ -65,7 +72,6 @@ namespace PetShopManagementSystem.views
         HelpForm helpForm = new HelpForm();
         UserProfileForm userProfileForm = new UserProfileForm();
 
-        // Button click events for each form
         private void petsFromBtn_Click(object sender, EventArgs e)
         {
             addUserControl(petsList);
@@ -129,5 +135,25 @@ namespace PetShopManagementSystem.views
 
         //---------------------------------------------------------------
 
+        private void countAddCart_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void countAddCart_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel9_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
+
+
+
+
+
+

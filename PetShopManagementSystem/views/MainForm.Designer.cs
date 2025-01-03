@@ -43,6 +43,7 @@
             settingFormBtn = new Label();
             pictureBox9 = new PictureBox();
             panel9 = new Panel();
+            countAddCart = new Label();
             addCartFormBtn = new Label();
             pictureBox7 = new PictureBox();
             panel8 = new Panel();
@@ -263,12 +264,26 @@
             // 
             // panel9
             // 
+            panel9.Controls.Add(countAddCart);
             panel9.Controls.Add(addCartFormBtn);
             panel9.Controls.Add(pictureBox7);
             panel9.Location = new Point(0, 785);
             panel9.Name = "panel9";
             panel9.Size = new Size(374, 88);
             panel9.TabIndex = 8;
+            panel9.Paint += panel9_Paint;
+            // 
+            // countAddCart
+            // 
+            countAddCart.AutoSize = true;
+            countAddCart.Font = new Font("Segoe UI", 7.875F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            countAddCart.ForeColor = Color.Gold;
+            countAddCart.Location = new Point(144, 3);
+            countAddCart.Name = "countAddCart";
+            countAddCart.Size = new Size(0, 30);
+            countAddCart.TabIndex = 2;
+            countAddCart.TextChanged += countAddCart_TextChanged;
+            countAddCart.Click += countAddCart_Click;
             // 
             // addCartFormBtn
             // 
@@ -277,7 +292,7 @@
             addCartFormBtn.Cursor = Cursors.Hand;
             addCartFormBtn.Font = new Font("Times New Roman", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             addCartFormBtn.ForeColor = Color.FromArgb(251, 251, 251);
-            addCartFormBtn.Location = new Point(174, 31);
+            addCartFormBtn.Location = new Point(171, 34);
             addCartFormBtn.Name = "addCartFormBtn";
             addCartFormBtn.Size = new Size(109, 26);
             addCartFormBtn.TabIndex = 1;
@@ -710,5 +725,6 @@
         private PictureBox pictureBox11;
         private Label label1;
         private PictureBox pictureBox12;
+        public Label countAddCart;
     }
 }

@@ -30,8 +30,11 @@
         {
             flowLayoutPanel1 = new FlowLayoutPanel();
             panel6 = new Panel();
+            fvtCountLabel = new Label();
+            favouriteBtn = new Label();
+            pictureBox3 = new PictureBox();
             panel1 = new Panel();
-            label2 = new Label();
+            addNewPetBtn = new Label();
             pictureBox2 = new PictureBox();
             radioButton2 = new RadioButton();
             radioButton3 = new RadioButton();
@@ -40,6 +43,7 @@
             pictureBox1 = new PictureBox();
             textBox1 = new TextBox();
             panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -57,6 +61,9 @@
             // 
             // panel6
             // 
+            panel6.Controls.Add(fvtCountLabel);
+            panel6.Controls.Add(favouriteBtn);
+            panel6.Controls.Add(pictureBox3);
             panel6.Controls.Add(panel1);
             panel6.Controls.Add(radioButton2);
             panel6.Controls.Add(radioButton3);
@@ -70,25 +77,62 @@
             panel6.Size = new Size(1675, 135);
             panel6.TabIndex = 2;
             // 
+            // fvtCountLabel
+            // 
+            fvtCountLabel.AutoSize = true;
+            fvtCountLabel.Font = new Font("Segoe UI", 7.875F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            fvtCountLabel.ForeColor = Color.Gold;
+            fvtCountLabel.Location = new Point(557, 45);
+            fvtCountLabel.Name = "fvtCountLabel";
+            fvtCountLabel.Size = new Size(24, 30);
+            fvtCountLabel.TabIndex = 17;
+            fvtCountLabel.Text = "0";
+            fvtCountLabel.Click += fvtCountLabel_Click;
+            // 
+            // favouriteBtn
+            // 
+            favouriteBtn.AutoSize = true;
+            favouriteBtn.Cursor = Cursors.Hand;
+            favouriteBtn.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
+            favouriteBtn.ForeColor = Color.FromArgb(139, 139, 139);
+            favouriteBtn.Location = new Point(516, 66);
+            favouriteBtn.Name = "favouriteBtn";
+            favouriteBtn.Size = new Size(56, 32);
+            favouriteBtn.TabIndex = 16;
+            favouriteBtn.Text = "FVT";
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Cursor = Cursors.Hand;
+            pictureBox3.Image = Properties.Resources.star_30;
+            pictureBox3.Location = new Point(465, 56);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(50, 48);
+            pictureBox3.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox3.TabIndex = 15;
+            pictureBox3.TabStop = false;
+            // 
             // panel1
             // 
-            panel1.Controls.Add(label2);
+            panel1.Controls.Add(addNewPetBtn);
             panel1.Controls.Add(pictureBox2);
             panel1.Location = new Point(1395, 59);
             panel1.Name = "panel1";
             panel1.Size = new Size(260, 72);
             panel1.TabIndex = 7;
             // 
-            // label2
+            // addNewPetBtn
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = SystemColors.Control;
-            label2.Location = new Point(82, 17);
-            label2.Name = "label2";
-            label2.Size = new Size(162, 32);
-            label2.TabIndex = 1;
-            label2.Text = "Add New Pet";
+            addNewPetBtn.AutoSize = true;
+            addNewPetBtn.Cursor = Cursors.Hand;
+            addNewPetBtn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            addNewPetBtn.ForeColor = SystemColors.Control;
+            addNewPetBtn.Location = new Point(82, 17);
+            addNewPetBtn.Name = "addNewPetBtn";
+            addNewPetBtn.Size = new Size(162, 32);
+            addNewPetBtn.TabIndex = 1;
+            addNewPetBtn.Text = "Add New Pet";
+            addNewPetBtn.Click += addNewPetBtn_Click;
             // 
             // pictureBox2
             // 
@@ -178,6 +222,7 @@
             Size = new Size(1675, 1388);
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -197,6 +242,9 @@
         private RadioButton radioButton3;
         private Panel panel1;
         private PictureBox pictureBox2;
-        private Label label2;
+        private Label addNewPetBtn;
+        private Label favouriteBtn;
+        private PictureBox pictureBox3;
+        public Label fvtCountLabel;
     }
 }

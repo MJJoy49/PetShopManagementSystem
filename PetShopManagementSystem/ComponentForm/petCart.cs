@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PetShopManagementSystem.views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace PetShopManagementSystem.ComponentForm
 {
     public partial class petCart : UserControl
     {
+
         public petCart()
         {
             InitializeComponent();
@@ -25,8 +27,6 @@ namespace PetShopManagementSystem.ComponentForm
             this.pictureBox1 = pictureBox1;
             this.petName = petName;
         }
-
-
 
         private void RoundedCorners(Control control, int radius)
         {
@@ -43,23 +43,40 @@ namespace PetShopManagementSystem.ComponentForm
             control.Region = new Region(path);
         }
 
-
-        int addFvt =0;
+        int addFvt = 0;
         private void pictureBox2_DoubleClick(object sender, EventArgs e)
         {
             if (addFvt == 0)
             {
                 addFvt = 1;
                 pictureBox2.Image = Properties.Resources.star_30;
+                PetsList.fvtCount++;
+                PetsList.forFvtCount.fvtCountLabel.Text = PetsList.fvtCount.ToString();
             }
-            
-
             else
             {
                 addFvt = 0;
                 pictureBox2.Image = Properties.Resources.add_favorite_30;
+                PetsList.fvtCount--;
+                PetsList.forFvtCount.fvtCountLabel.Text = PetsList.fvtCount.ToString();
             }
         }
 
+
+
+
+        int updateCartCount;
+        private void addCartBtn_Click(object sender, EventArgs e)
+        {
+            MainForm.addCartCount += 1;
+            updateCartCount = MainForm.addCartCount;
+            string addCartNumber = updateCartCount.ToString();
+            MainForm.forAddcartLabel.countAddCart.Text = addCartNumber;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
