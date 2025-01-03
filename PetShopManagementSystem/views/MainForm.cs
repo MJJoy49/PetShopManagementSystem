@@ -15,7 +15,7 @@ namespace PetShopManagementSystem.views
 {
     public partial class MainForm : Form
     {
-        public static MainForm forAddcartLabel;
+        public static MainForm? forAddcartLabel;
         public static int addCartCount = 0;
 
 

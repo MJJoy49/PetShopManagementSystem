@@ -28,8 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PetsList));
             flowLayoutPanel1 = new FlowLayoutPanel();
             panel6 = new Panel();
+            label2 = new Label();
+            pictureBox5 = new PictureBox();
+            allShowPetBtn = new Label();
+            pictureBox4 = new PictureBox();
             fvtCountLabel = new Label();
             favouriteBtn = new Label();
             pictureBox3 = new PictureBox();
@@ -43,6 +48,8 @@
             pictureBox1 = new PictureBox();
             textBox1 = new TextBox();
             panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -61,6 +68,10 @@
             // 
             // panel6
             // 
+            panel6.Controls.Add(label2);
+            panel6.Controls.Add(pictureBox5);
+            panel6.Controls.Add(allShowPetBtn);
+            panel6.Controls.Add(pictureBox4);
             panel6.Controls.Add(fvtCountLabel);
             panel6.Controls.Add(favouriteBtn);
             panel6.Controls.Add(pictureBox3);
@@ -77,17 +88,64 @@
             panel6.Size = new Size(1675, 135);
             panel6.TabIndex = 2;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Cursor = Cursors.Hand;
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.FromArgb(139, 139, 139);
+            label2.Location = new Point(415, 86);
+            label2.Name = "label2";
+            label2.Size = new Size(69, 32);
+            label2.TabIndex = 21;
+            label2.Text = "PETS";
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.Cursor = Cursors.Hand;
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(350, 68);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(85, 62);
+            pictureBox5.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox5.TabIndex = 20;
+            pictureBox5.TabStop = false;
+            pictureBox5.Click += pictureBox5_Click;
+            // 
+            // allShowPetBtn
+            // 
+            allShowPetBtn.AutoSize = true;
+            allShowPetBtn.Cursor = Cursors.Hand;
+            allShowPetBtn.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
+            allShowPetBtn.ForeColor = Color.FromArgb(139, 139, 139);
+            allShowPetBtn.Location = new Point(86, 86);
+            allShowPetBtn.Name = "allShowPetBtn";
+            allShowPetBtn.Size = new Size(55, 32);
+            allShowPetBtn.TabIndex = 19;
+            allShowPetBtn.Text = "ALL";
+            allShowPetBtn.Click += allShowPetBtn_Click;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Cursor = Cursors.Hand;
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(35, 76);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(50, 48);
+            pictureBox4.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox4.TabIndex = 18;
+            pictureBox4.TabStop = false;
+            // 
             // fvtCountLabel
             // 
             fvtCountLabel.AutoSize = true;
             fvtCountLabel.Font = new Font("Segoe UI", 7.875F, FontStyle.Regular, GraphicsUnit.Point, 0);
             fvtCountLabel.ForeColor = Color.Gold;
-            fvtCountLabel.Location = new Point(557, 45);
+            fvtCountLabel.Location = new Point(264, 65);
             fvtCountLabel.Name = "fvtCountLabel";
             fvtCountLabel.Size = new Size(24, 30);
             fvtCountLabel.TabIndex = 17;
             fvtCountLabel.Text = "0";
-            fvtCountLabel.Click += fvtCountLabel_Click;
             // 
             // favouriteBtn
             // 
@@ -95,17 +153,18 @@
             favouriteBtn.Cursor = Cursors.Hand;
             favouriteBtn.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
             favouriteBtn.ForeColor = Color.FromArgb(139, 139, 139);
-            favouriteBtn.Location = new Point(516, 66);
+            favouriteBtn.Location = new Point(223, 86);
             favouriteBtn.Name = "favouriteBtn";
             favouriteBtn.Size = new Size(56, 32);
             favouriteBtn.TabIndex = 16;
             favouriteBtn.Text = "FVT";
+            favouriteBtn.Click += favouriteBtn_Click;
             // 
             // pictureBox3
             // 
             pictureBox3.Cursor = Cursors.Hand;
             pictureBox3.Image = Properties.Resources.star_30;
-            pictureBox3.Location = new Point(465, 56);
+            pictureBox3.Location = new Point(172, 76);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(50, 48);
             pictureBox3.SizeMode = PictureBoxSizeMode.CenterImage;
@@ -222,6 +281,8 @@
             Size = new Size(1675, 1388);
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -246,5 +307,9 @@
         private Label favouriteBtn;
         private PictureBox pictureBox3;
         public Label fvtCountLabel;
+        private Label allShowPetBtn;
+        private PictureBox pictureBox4;
+        private Label label2;
+        private PictureBox pictureBox5;
     }
 }
