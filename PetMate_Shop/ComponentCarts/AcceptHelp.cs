@@ -1,5 +1,7 @@
-﻿using PetMate_Shop.Database;
+﻿using PetMate_Shop.ComponentForms;
+using PetMate_Shop.Database;
 using PetMate_Shop.Models;
+using PetMate_Shop.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace PetMate_Shop.ComponentCarts
 {
@@ -72,6 +75,7 @@ namespace PetMate_Shop.ComponentCarts
                 MakeNotification.AddNotification(_volunteerUserName, message);
 
                 MessageBox.Show("Work completed and status updated.");
+                HelpForm.instance.LoadAcceptHelp(MainForm.instance._userName);
             }
             catch (Exception ex)
             {
@@ -113,6 +117,7 @@ namespace PetMate_Shop.ComponentCarts
                 MakeNotification.AddNotification(_volunteerUserName, message);
 
                 MessageBox.Show("Help request cancelled and status updated.");
+                HelpForm.instance.LoadAcceptHelp(MainForm.instance._userName);
             }
             catch (Exception ex)
             {

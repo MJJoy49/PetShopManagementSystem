@@ -9,6 +9,7 @@ namespace PetMate_Shop.ComponentForms
 {
     public partial class HelpForm : UserControl
     {
+        public static HelpForm instance;
         private readonly string _userName;
         private readonly string _role;
 
@@ -17,6 +18,7 @@ namespace PetMate_Shop.ComponentForms
             _userName = username;
             _role = role;
             InitializeComponent();
+            instance = this;
         }
 
         public void LoadVolunteer()

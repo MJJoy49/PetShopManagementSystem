@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using PetMate_Shop.ComponentForms;
 using PetMate_Shop.Database;
 using PetMate_Shop.Models;
+using PetMate_Shop.Views;
 
 namespace PetMate_Shop.ComponentCarts
 {
@@ -71,6 +73,10 @@ namespace PetMate_Shop.ComponentCarts
 
                 MessageBox.Show("Request accepted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 connection.Dispose();
+
+
+                //recall;
+                HelpForm.instance.LoadVolunteerReq(MainForm.instance._userName);
             }
             catch (Exception ex)
             {
@@ -96,6 +102,9 @@ namespace PetMate_Shop.ComponentCarts
 
                 MessageBox.Show("Request rejected successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 connection.Dispose();
+
+                //recall;
+                HelpForm.instance.LoadVolunteerReq(MainForm.instance._userName);
             }
             catch (Exception ex)
             {

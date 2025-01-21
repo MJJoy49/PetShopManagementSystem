@@ -80,8 +80,6 @@ namespace PetMate_Shop.ComponentCarts
                     return;
                 }
 
-                MessageBox.Show($"CustomerID: {customerId}, PetID: {_petIdValue}");
-
                 string updateAdoptionQuery = @"
                                                 UPDATE Adoption 
                                                 SET AcceptanceStatus = 'accepted' 
