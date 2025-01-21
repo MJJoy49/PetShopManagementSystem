@@ -49,16 +49,237 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComponentCarts\AcceptHelp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentCarts\AcceptHelp.Designer.cs">
+      <DependentUpon>AcceptHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentCarts\AccessoriesCart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentCarts\AccessoriesCart.Designer.cs">
+      <DependentUpon>AccessoriesCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentCarts\AddCart_Cart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentCarts\AddCart_Cart.Designer.cs">
+      <DependentUpon>AddCart_Cart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentCarts\AdopRequstCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentCarts\AdopRequstCard.Designer.cs">
+      <DependentUpon>AdopRequstCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentCarts\BuyPetID.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentCarts\BuyPetID.Designer.cs">
+      <DependentUpon>BuyPetID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentCarts\CustomerCart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentCarts\CustomerCart.Designer.cs">
+      <DependentUpon>CustomerCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentCarts\EmployeeCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentCarts\EmployeeCard.Designer.cs">
+      <DependentUpon>EmployeeCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentCarts\HelpAcceptReject_cart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentCarts\HelpAcceptReject_cart.Designer.cs">
+      <DependentUpon>HelpAcceptReject_cart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentCarts\NotificationCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentCarts\NotificationCard.Designer.cs">
+      <DependentUpon>NotificationCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentCarts\PetCart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentCarts\PetCart.Designer.cs">
+      <DependentUpon>PetCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentCarts\VolunteerCart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentCarts\VolunteerCart.Designer.cs">
+      <DependentUpon>VolunteerCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentCarts\VolunteerHelps.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentCarts\VolunteerHelps.Designer.cs">
+      <DependentUpon>VolunteerHelps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentForms\AccessoriesForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentForms\AccessoriesForm.Designer.cs">
+      <DependentUpon>AccessoriesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentForms\AddCartForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentForms\AddCartForm.Designer.cs">
+      <DependentUpon>AddCartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentForms\AdoptionForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentForms\AdoptionForm.Designer.cs">
+      <DependentUpon>AdoptionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentForms\DashboardForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentForms\DashboardForm.Designer.cs">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentForms\HelpForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentForms\HelpForm.Designer.cs">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentForms\NotificationForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentForms\NotificationForm.Designer.cs">
+      <DependentUpon>NotificationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentForms\OrderItems.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentForms\OrderItems.Designer.cs">
+      <DependentUpon>OrderItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentForms\OrdersForms.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentForms\OrdersForms.Designer.cs">
+      <DependentUpon>OrdersForms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentForms\PetsListForms.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentForms\PetsListForms.Designer.cs">
+      <DependentUpon>PetsListForms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentForms\ShowOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentForms\ShowOrder.Designer.cs">
+      <DependentUpon>ShowOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentForms\UserProfileForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentForms\UserProfileForm.Designer.cs">
+      <DependentUpon>UserProfileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentForms\UsersForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentForms\UsersForm.Designer.cs">
+      <DependentUpon>UsersForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Database\DatabaseConnection.cs" />
+    <Compile Include="Database\DatabaseHelper.cs" />
+    <Compile Include="FormStyle\RoundPanel.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\IdCreator.cs" />
+    <Compile Include="Models\MakeNotification.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\Volunteer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddAccessories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddAccessories.Designer.cs">
+      <DependentUpon>AddAccessories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddPet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddPet.Designer.cs">
+      <DependentUpon>AddPet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddEmployee.Designer.cs">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddVolunteer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddVolunteer.Designer.cs">
+      <DependentUpon>AddVolunteer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddCustomer.Designer.cs">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdoptionRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AdoptionRequest.Designer.cs">
+      <DependentUpon>AdoptionRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditAccessories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EditAccessories.Designer.cs">
+      <DependentUpon>EditAccessories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EditCustomer.Designer.cs">
+      <DependentUpon>EditCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EditEmployee.Designer.cs">
+      <DependentUpon>EditEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditPet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EditPet.Designer.cs">
+      <DependentUpon>EditPet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ForgetPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ForgetPasswordForm.Designer.cs">
+      <DependentUpon>ForgetPasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HelpRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\HelpRequest.Designer.cs">
+      <DependentUpon>HelpRequest.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\LoginForm.cs">
       <SubType>Form</SubType>
@@ -72,11 +293,35 @@
     <Compile Include="Views\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Passwordverification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Passwordverification.Designer.cs">
+      <DependentUpon>Passwordverification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PaymentMethod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PaymentMethod.Designer.cs">
+      <DependentUpon>PaymentMethod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProfileEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ProfileEdit.Designer.cs">
+      <DependentUpon>ProfileEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VolunteerEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\VolunteerEdit.Designer.cs">
+      <DependentUpon>VolunteerEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\WelcomeForm.cs">
       <SubType>Form</SubType>
@@ -84,10 +329,118 @@
     <Compile Include="Views\WelcomeForm.Designer.cs">
       <DependentUpon>WelcomeForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ComponentCarts\AcceptHelp.resx">
+      <DependentUpon>AcceptHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentCarts\AccessoriesCart.resx">
+      <DependentUpon>AccessoriesCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentCarts\AddCart_Cart.resx">
+      <DependentUpon>AddCart_Cart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentCarts\AdopRequstCard.resx">
+      <DependentUpon>AdopRequstCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentCarts\BuyPetID.resx">
+      <DependentUpon>BuyPetID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentCarts\CustomerCart.resx">
+      <DependentUpon>CustomerCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentCarts\EmployeeCard.resx">
+      <DependentUpon>EmployeeCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentCarts\HelpAcceptReject_cart.resx">
+      <DependentUpon>HelpAcceptReject_cart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentCarts\NotificationCard.resx">
+      <DependentUpon>NotificationCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentCarts\PetCart.resx">
+      <DependentUpon>PetCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentCarts\VolunteerCart.resx">
+      <DependentUpon>VolunteerCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentCarts\VolunteerHelps.resx">
+      <DependentUpon>VolunteerHelps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentForms\AccessoriesForm.resx">
+      <DependentUpon>AccessoriesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentForms\AddCartForm.resx">
+      <DependentUpon>AddCartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentForms\AdoptionForm.resx">
+      <DependentUpon>AdoptionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentForms\DashboardForm.resx">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentForms\HelpForm.resx">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentForms\NotificationForm.resx">
+      <DependentUpon>NotificationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentForms\OrderItems.resx">
+      <DependentUpon>OrderItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentForms\OrdersForms.resx">
+      <DependentUpon>OrdersForms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentForms\PetsListForms.resx">
+      <DependentUpon>PetsListForms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentForms\ShowOrder.resx">
+      <DependentUpon>ShowOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentForms\UserProfileForm.resx">
+      <DependentUpon>UserProfileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentForms\UsersForm.resx">
+      <DependentUpon>UsersForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddAccessories.resx">
+      <DependentUpon>AddAccessories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddPet.resx">
+      <DependentUpon>AddPet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddEmployee.resx">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddVolunteer.resx">
+      <DependentUpon>AddVolunteer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddCustomer.resx">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdoptionRequest.resx">
+      <DependentUpon>AdoptionRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EditAccessories.resx">
+      <DependentUpon>EditAccessories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EditCustomer.resx">
+      <DependentUpon>EditCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EditEmployee.resx">
+      <DependentUpon>EditEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EditPet.resx">
+      <DependentUpon>EditPet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ForgetPasswordForm.resx">
+      <DependentUpon>ForgetPasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\HelpRequest.resx">
+      <DependentUpon>HelpRequest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -95,8 +448,20 @@
     <EmbeddedResource Include="Views\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Passwordverification.resx">
+      <DependentUpon>Passwordverification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PaymentMethod.resx">
+      <DependentUpon>PaymentMethod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ProfileEdit.resx">
+      <DependentUpon>ProfileEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\VolunteerEdit.resx">
+      <DependentUpon>VolunteerEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\WelcomeForm.resx">
       <DependentUpon>WelcomeForm.cs</DependentUpon>
@@ -116,7 +481,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ComponentForms\" />
     <Folder Include="Interfaces\" />
   </ItemGroup>
   <ItemGroup>
@@ -124,6 +488,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\close-481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IconsImg\add-favorite-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IconsImg\star-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IconsImg\pet-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IconsImg\accessories-25.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

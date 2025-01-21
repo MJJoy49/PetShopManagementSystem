@@ -1,5 +1,6 @@
 ﻿using PetMate_Shop.Database;
 using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 
 namespace PetMate_Shop.Models
@@ -60,7 +61,32 @@ namespace PetMate_Shop.Models
 
         private static string GetLastIdFromDatabase(string tableName)
         {
-            string query = $"SELECT TOP 1 Id FROM {tableName} ORDER BY Id DESC";
+            
+            var idColumnMapping = new Dictionary<string, string>
+            {
+                { "Admin", "AdminID" },
+                { "Customer", "CustomerID" },
+                { "Employee", "EmployeeID" },
+                { "Pet", "PetID" },
+                { "Accessories", "AccessoryID" },
+                { "AddCart", "CartID" },
+                { "CustomerOrder", "OrderID" },
+                { "Payment", "PaymentID" },
+                { "Adoption", "AdoptionID" },
+                { "Volunteer", "VolunteerID" },
+                { "HelpRequest", "HelpRequestID" },
+                { "Notification", "NotificationID" },
+                { "BuyPet", "BuyPetID" }
+             };
+
+            
+            if (!idColumnMapping.ContainsKey(tableName))
+            {
+                throw new ArgumentException($"Invalid table name: {tableName}");
+            }
+
+            string idColumn = idColumnMapping[tableName];
+            string query = $"SELECT TOP 1 {idColumn} FROM {tableName} ORDER BY {idColumn} DESC";
 
             using (var connection = DatabaseConnection.GetConnection())
             {
@@ -73,5 +99,6 @@ namespace PetMate_Shop.Models
                 }
             }
         }
+
     }
 }

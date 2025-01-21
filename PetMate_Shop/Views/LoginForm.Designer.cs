@@ -30,10 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.leftPanel = new System.Windows.Forms.Panel();
-            this.closeBtn = new System.Windows.Forms.PictureBox();
-            this.applicationLogo = new System.Windows.Forms.PictureBox();
-            this.loginStyleLabel = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.SignUpBtn = new System.Windows.Forms.Button();
+            this.loginStyleLabel = new System.Windows.Forms.Label();
+            this.applicationLogo = new System.Windows.Forms.PictureBox();
+            this.closeBtn = new System.Windows.Forms.PictureBox();
             this.loginBtn = new System.Windows.Forms.Button();
             this.clearBtn = new System.Windows.Forms.Button();
             this.userNameLogo = new System.Windows.Forms.PictureBox();
@@ -43,15 +45,13 @@
             this.passwordTB = new System.Windows.Forms.TextBox();
             this.passwordLogo = new System.Windows.Forms.PictureBox();
             this.forgetPasswordBtn = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.showPasswordBtn = new System.Windows.Forms.PictureBox();
             this.leftPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.closeBtn)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.applicationLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closeBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userNameLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.passwordLogo)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.showPasswordBtn)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,37 +68,27 @@
             this.leftPanel.Size = new System.Drawing.Size(413, 1002);
             this.leftPanel.TabIndex = 0;
             // 
-            // closeBtn
+            // panel1
             // 
-            this.closeBtn.Image = ((System.Drawing.Image)(resources.GetObject("closeBtn.Image")));
-            this.closeBtn.Location = new System.Drawing.Point(1502, 12);
-            this.closeBtn.Name = "closeBtn";
-            this.closeBtn.Size = new System.Drawing.Size(49, 49);
-            this.closeBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.closeBtn.TabIndex = 1;
-            this.closeBtn.TabStop = false;
-            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(413, 89);
+            this.panel1.TabIndex = 3;
             // 
-            // applicationLogo
+            // label5
             // 
-            this.applicationLogo.Image = ((System.Drawing.Image)(resources.GetObject("applicationLogo.Image")));
-            this.applicationLogo.Location = new System.Drawing.Point(64, 335);
-            this.applicationLogo.Name = "applicationLogo";
-            this.applicationLogo.Size = new System.Drawing.Size(287, 225);
-            this.applicationLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.applicationLogo.TabIndex = 0;
-            this.applicationLogo.TabStop = false;
-            // 
-            // loginStyleLabel
-            // 
-            this.loginStyleLabel.AutoSize = true;
-            this.loginStyleLabel.Font = new System.Drawing.Font("Times New Roman", 16.125F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.loginStyleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.loginStyleLabel.Location = new System.Drawing.Point(126, 489);
-            this.loginStyleLabel.Name = "loginStyleLabel";
-            this.loginStyleLabel.Size = new System.Drawing.Size(182, 49);
-            this.loginStyleLabel.TabIndex = 1;
-            this.loginStyleLabel.Text = "Login →";
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Roboto Medium", 16.125F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label5.Location = new System.Drawing.Point(53, 18);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(318, 52);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "PetMate Shop.";
             // 
             // SignUpBtn
             // 
@@ -116,6 +106,38 @@
             this.SignUpBtn.Text = "Sign up";
             this.SignUpBtn.UseVisualStyleBackColor = false;
             this.SignUpBtn.Click += new System.EventHandler(this.SignUpBtn_Click);
+            // 
+            // loginStyleLabel
+            // 
+            this.loginStyleLabel.AutoSize = true;
+            this.loginStyleLabel.Font = new System.Drawing.Font("Times New Roman", 16.125F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.loginStyleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.loginStyleLabel.Location = new System.Drawing.Point(126, 489);
+            this.loginStyleLabel.Name = "loginStyleLabel";
+            this.loginStyleLabel.Size = new System.Drawing.Size(182, 49);
+            this.loginStyleLabel.TabIndex = 1;
+            this.loginStyleLabel.Text = "Login →";
+            // 
+            // applicationLogo
+            // 
+            this.applicationLogo.Image = ((System.Drawing.Image)(resources.GetObject("applicationLogo.Image")));
+            this.applicationLogo.Location = new System.Drawing.Point(64, 335);
+            this.applicationLogo.Name = "applicationLogo";
+            this.applicationLogo.Size = new System.Drawing.Size(287, 225);
+            this.applicationLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.applicationLogo.TabIndex = 0;
+            this.applicationLogo.TabStop = false;
+            // 
+            // closeBtn
+            // 
+            this.closeBtn.Image = ((System.Drawing.Image)(resources.GetObject("closeBtn.Image")));
+            this.closeBtn.Location = new System.Drawing.Point(1502, 12);
+            this.closeBtn.Name = "closeBtn";
+            this.closeBtn.Size = new System.Drawing.Size(49, 49);
+            this.closeBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.closeBtn.TabIndex = 1;
+            this.closeBtn.TabStop = false;
+            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
             // 
             // loginBtn
             // 
@@ -231,28 +253,7 @@
             this.forgetPasswordBtn.Size = new System.Drawing.Size(187, 32);
             this.forgetPasswordBtn.TabIndex = 11;
             this.forgetPasswordBtn.Text = "Forget Password";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(413, 89);
-            this.panel1.TabIndex = 3;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Roboto Medium", 16.125F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label5.Location = new System.Drawing.Point(53, 18);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(318, 52);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "PetMate Shop.";
+            this.forgetPasswordBtn.Click += new System.EventHandler(this.forgetPasswordBtn_Click);
             // 
             // showPasswordBtn
             // 
@@ -285,17 +286,18 @@
             this.Controls.Add(this.closeBtn);
             this.Controls.Add(this.leftPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
             this.leftPanel.ResumeLayout(false);
             this.leftPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.closeBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.applicationLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userNameLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.passwordLogo)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.applicationLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closeBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userNameLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.passwordLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.showPasswordBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

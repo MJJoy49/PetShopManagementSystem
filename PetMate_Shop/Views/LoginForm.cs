@@ -17,11 +17,6 @@ namespace PetMate_Shop.Views
         string _userName;
         string _password;
 
-
-
-
-
-
         public LoginForm()
         {
             InitializeComponent();
@@ -43,42 +38,36 @@ namespace PetMate_Shop.Views
             string _userName = userNameTB.Text.Trim();
             string _password = passwordTB.Text.Trim();
 
+            if (string.IsNullOrWhiteSpace(_userName) || string.IsNullOrWhiteSpace(_password))
+            {
+                return;
+            }
+
             string query = "SELECT COUNT(*) FROM Users WHERE UserName COLLATE SQL_Latin1_General_CP1_CS_AS = @Username AND Password COLLATE SQL_Latin1_General_CP1_CS_AS = @Password;";
 
-            using (var connection = DatabaseConnection.GetConnection())
+            var connection = DatabaseConnection.GetConnection();
+            connection.Open();
+
+            var sqlCommand = new SqlCommand(query, connection);
+            sqlCommand.Parameters.AddWithValue("@Username", _userName);
+            sqlCommand.Parameters.AddWithValue("@Password", _password);
+
+            int userCount = (int)sqlCommand.ExecuteScalar();
+
+            if (userCount > 0)
             {
-                try
-                {
-                    connection.Open();
-
-                    using (SqlCommand sqlCommand = new SqlCommand(query, connection))
-                    {
-                        sqlCommand.Parameters.Clear();
-                        sqlCommand.Parameters.AddWithValue("@Username", _userName);
-                        sqlCommand.Parameters.AddWithValue("@Password", _password);
-
-                       
-                        int userCount = (int)sqlCommand.ExecuteScalar();
-
-                        if (userCount > 0)
-                        {
-                            MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Hide();
-                            MainForm mainForm = new MainForm();
-                            mainForm.Show();
-                            
-                        }
-                        else
-                        {
-                            MessageBox.Show("Invalid username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                this.Hide();
+                MainForm mainForm = new MainForm(_userName);
+                mainForm.Show();
             }
+            else
+            {
+                MessageBox.Show("Invalid username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            sqlCommand.Dispose();
+            connection.Dispose();
         }
 
         private void showPasswordBtn_Click(object sender, EventArgs e)
@@ -89,8 +78,15 @@ namespace PetMate_Shop.Views
         private void SignUpBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            RegisterForm registerForm = new RegisterForm();
+            var registerForm = new RegisterForm();
             registerForm.Show();
+        }
+
+        private void forgetPasswordBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var forgetPasswordForm = new ForgetPasswordForm();
+            forgetPasswordForm.Show();
         }
     }
 }

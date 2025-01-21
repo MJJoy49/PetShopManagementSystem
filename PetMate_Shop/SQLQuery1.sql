@@ -16,20 +16,13 @@ CREATE TABLE Users (
     StreetNameOrNumber VARCHAR(100),
     CityOrAreaName VARCHAR(50),
     PostalCode VARCHAR(10),
-    QuestionOne TEXT,
-    QuestionTwo TEXT,
-    QuestionThree TEXT,
+    QuestionOneAns VARCHAR(50),
+    QuestionTwoAns VARCHAR(50),
+    QuestionThreeAns VARCHAR(50),
     CreatedAt DATETIME,
     UpdatedAt DATETIME
 );
 
-
--- Table: Admin
-CREATE TABLE Admin (
-    AdminID VARCHAR(50) PRIMARY KEY,
-    UserName VARCHAR(50),
-    FOREIGN KEY (UserName) REFERENCES Users(UserName) ON DELETE CASCADE
-);
 
 -- Table: Customer
 CREATE TABLE Customer (
@@ -39,6 +32,12 @@ CREATE TABLE Customer (
 );
 
 
+-- Table: Admin
+CREATE TABLE Admin (
+    AdminID VARCHAR(50) PRIMARY KEY,
+    UserName VARCHAR(50),
+    FOREIGN KEY (UserName) REFERENCES Users(UserName) ON DELETE CASCADE
+);
 
 
 -- Table: Employee
@@ -61,47 +60,76 @@ CREATE TABLE Pet (
     Description TEXT,
     AgeRange VARCHAR(20),
     Stock INT,
-    HealthStatus VARCHAR(50)
+    HealthStatus VARCHAR(50),
+	PetImg VARBINARY(MAX)
 );
+
+-- Table: BuyPet 
+CREATE TABLE BuyPet (
+    BuyPetID VARCHAR(50) PRIMARY KEY,         
+    CustomerID VARCHAR(50),                   
+    PetID VARCHAR(50),                        
+    AdoptionRequestID VARCHAR(50),            
+    PurchaseDate DATETIME,                    
+    Price DECIMAL(10, 2),                     
+    FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID) ON DELETE CASCADE,
+    FOREIGN KEY (PetID) REFERENCES Pet(PetID) ON DELETE CASCADE
+);
+
+
 
 -- Table: Accessories
 CREATE TABLE Accessories (
     AccessoryID VARCHAR(50) PRIMARY KEY,
     Name VARCHAR(50),
-    Type VARCHAR(50),
-    Material VARCHAR(50),
     Price DECIMAL(10, 2),
     Description TEXT,
 	SuitableFor VARCHAR(30),
     Stock INT,
+	Category VARCHAR(50),
     Brand VARCHAR(50),
     CreatedAt DATETIME,
-    UpdatedAt DATETIME
+    UpdatedAt DATETIME,
+	AccessoriesImg VARBINARY(MAX)
 );
 
--- Table: AddCart
+
+
+-- Table: AddCart (Customer's Cart with Pet and Accessories)
 CREATE TABLE AddCart (
-    CartID VARCHAR(50) PRIMARY KEY,
+    AddCardId INT IDENTITY(1,1) PRIMARY KEY,  
+    CartID VARCHAR(50),                
     CustomerID VARCHAR(50),
-    ItemID VARCHAR(50),
-    ItemType VARCHAR(20),
+    ItemID VARCHAR(50),                       
+    ItemType VARCHAR(20),                    
     Quantity INT,
     AddedDate DATETIME,
+    CartStatus VARCHAR(20) DEFAULT 'Active',
     FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID) ON DELETE CASCADE
 );
 
-
-
--- Table: CustomerOrder
+-- Table: CustomerOrder 
 CREATE TABLE CustomerOrder (
     OrderID VARCHAR(50) PRIMARY KEY,
     CustomerID VARCHAR(50),
-    CartID VARCHAR(50),
+    CartID VARCHAR(50),                      
     TotalAmount DECIMAL(10, 2),
     OrderStatus VARCHAR(50),
     OrderDate DATETIME,
-    FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID) ON DELETE NO ACTION,
-    FOREIGN KEY (CartID) REFERENCES AddCart(CartID) ON DELETE NO ACTION
+    FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID) ON DELETE NO ACTION
+);
+
+
+-- Table: AddFavourite
+CREATE TABLE AddFavourite (
+    FavouriteID VARCHAR(50) PRIMARY KEY, 
+    UserName VARCHAR(50),
+    AccessoriesID VARCHAR(50),
+    PetID VARCHAR(50),
+    AddedDate DATETIME,
+    FOREIGN KEY (UserName) REFERENCES Users(UserName) ON DELETE CASCADE,
+    FOREIGN KEY (AccessoriesID) REFERENCES Accessories(AccessoryID) ON DELETE CASCADE,
+    FOREIGN KEY (PetID) REFERENCES Pet(PetID) ON DELETE CASCADE
 );
 
 
@@ -131,14 +159,29 @@ CREATE TABLE Adoption (
     FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID) ON DELETE CASCADE
 );
 
+CREATE TABLE BuyPet (
+    BuyPetID VARCHAR(50) PRIMARY KEY,         
+    CustomerID VARCHAR(50),                    
+    PetID VARCHAR(50),                         
+    AdoptionRequestID VARCHAR(50),             
+    PurchaseDate DATETIME,                     
+    Price DECIMAL(10, 2),                      
+    FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID) ON DELETE CASCADE,
+    FOREIGN KEY (PetID) REFERENCES Pet(PetID) ON DELETE CASCADE
+);
+
+
+
 -- Table: Volunteer
 CREATE TABLE Volunteer (
     VolunteerID VARCHAR(50) PRIMARY KEY,
     UserName VARCHAR(50),
     TasksCompleted INT,
     RewardPoints INT,
+	WorkActiveStatus BIT NOT NULL DEFAULT 0,
     FOREIGN KEY (UserName) REFERENCES Users(UserName) ON DELETE CASCADE
 );
+
 
 -- Table: HelpRequest
 CREATE TABLE HelpRequest (
@@ -166,7 +209,11 @@ CREATE TABLE Notification (
 
 
 INSERT INTO Users (UserName, Password, Email, Phone, Role, CreatedAt, UpdatedAt,Name)
-VALUES ('admin01', 'admin01', 'damo01admin@gmail.com', '01234567890', 'Admin', GETDATE(), GETDATE(),'mr.demo');
+VALUES ('admin', 'admin', 'admin@gmail.com', '01234567890', 'Admin', GETDATE(), GETDATE(),'mr.demo');
+
+
+INSERT INTO Admin (AdminID, UserName)
+VALUES ('A1-001-25', 'admin');
 
 
 
@@ -174,21 +221,14 @@ VALUES ('admin01', 'admin01', 'damo01admin@gmail.com', '01234567890', 'Admin', G
 ----------------------end---------------------------------------------------
 
 
+SELECT hr.CustomerID, hr.PetID, hr.HelpDescription, u.UserName, u.Phone, u.CityOrAreaName 
+                                                FROM HelpRequest hr
+                                                INNER JOIN Users u ON hr.CustomerID = u.UserName
+                                                WHERE hr.VolunteerID = 'V1-02-25' AND hr.Status = 'not accepted'
 
+select * from HelpRequest WHERE VolunteerID = 'V1-02-25'
 
--- Example Insert Queries
-
--- Insert Example Data into Users Table
-INSERT INTO Users (UserName, Password, Email, Phone, Role, CreatedAt, UpdatedAt)
-VALUES ('mr.Damo', 'admin01', 'damo01admin@gmail.com', '01234567890', 'Admin', NOW(), NOW()),
-       ('jane_customer', 'password456', 'jane@example.com', '0987654321', 'Customer', NOW(), NOW());
-
--- Insert Example Data into Pet Table
-INSERT INTO Pet (PetID, Name, Type, Gender, Breed, Price, Description, AgeRange, Stock, HealthStatus)
-VALUES ('P001', 'Bella', 'Dog', 'Female', 'Labrador', 500, 'Friendly and playful', 'Adult', 10, 'Healthy'),
-       ('P002', 'Whiskers', 'Cat', 'Male', 'Persian', 300, 'Calm and affectionate', 'Young', 5, 'Healthy');
-
--- Insert Example Data into AddCart Table
-INSERT INTO AddCart (CartID, CustomerID, ItemID, ItemType, Quantity, AddedDate)
-VALUES ('C001', 'CUST001', 'P001', 'Pet', 1, NOW()),
-       ('C002', 'CUST001', 'A001', 'Accessory', 2, NOW());
+SELECT hr.CustomerID, hr.PetID, hr.HelpDescription, u.UserName, u.Phone, u.CityOrAreaName
+FROM HelpRequest hr
+INNER JOIN Users u ON hr.CustomerID = u.UserName
+WHERE LTRIM(RTRIM(hr.VolunteerID)) = 'V1-02-25' AND hr.Status = 'not accepted';

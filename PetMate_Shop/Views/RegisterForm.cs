@@ -40,7 +40,7 @@ namespace PetMate_Shop.Views
             _houseOrBuildingOrFlatNumber = houseOrBuildingOrFlatNumberTB.Text.Trim();
             _streetNameOrNumber = streetNameOrNumberTB.Text.Trim();
             _postalCode = postalCodeTB.Text.Trim();
-
+            _cityOrAreaName = cityOrAreaNameTB.Text.Trim();
 
             if (string.IsNullOrWhiteSpace(_name) || string.IsNullOrWhiteSpace(_email) || string.IsNullOrWhiteSpace(_houseOrBuildingOrFlatNumber) || string.IsNullOrWhiteSpace(_streetNameOrNumber) ||
                string.IsNullOrWhiteSpace(_postalCode))
@@ -49,13 +49,11 @@ namespace PetMate_Shop.Views
                 return;
             }
 
-            // Additional Validation: Email format and phone number (optional)
             if (!IsValidEmail(_email))
             {
                 MessageBox.Show("Invalid email format.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
 
             addressPanel.Visible = false;
         }
@@ -67,15 +65,13 @@ namespace PetMate_Shop.Views
 
         private void signInBtn_Click(object sender, EventArgs e)
         {
-            // Get user inputs from text boxes
             _password = passwordTB.Text.Trim();
             _rePassword = rePasswordTB.Text.Trim();
             _userName = userNameTB.Text.Trim();
-            _questionAnsOne = questionOneLabel.Text.Trim();
-            _questionAnsTwo = questionTwoLabel.Text.Trim();
-            _questionAnsThree = questionThreeLabel.Text.Trim();
+            _questionAnsOne = questionOneTB.Text.Trim();
+            _questionAnsTwo = questionTwoTB.Text.Trim();
+            _questionAnsThree = questionThreeTB.Text.Trim();
 
-            // Validate inputs
             if (string.IsNullOrWhiteSpace(_userName) || string.IsNullOrWhiteSpace(_password) || string.IsNullOrWhiteSpace(_rePassword) || string.IsNullOrWhiteSpace(_name) ||
                 string.IsNullOrWhiteSpace(_email) || string.IsNullOrWhiteSpace(_questionAnsOne) || string.IsNullOrWhiteSpace(_questionAnsTwo) || string.IsNullOrWhiteSpace(_questionAnsThree))
             {
@@ -89,21 +85,26 @@ namespace PetMate_Shop.Views
                 return;
             }
 
-            
+            Customer customer = new Customer(
+                _userName,
+                _password,
+                _name,
+                _email,
+                _phone,
+                _questionAnsOne,
+                _questionAnsTwo,
+                _questionAnsThree,
+                _houseOrBuildingOrFlatNumber,
+                _streetNameOrNumber,
+                _cityOrAreaName,
+                _postalCode
+            );
 
-            // Create Customer object
-            Customer customer = new Customer(_userName, _password, _name, _email, _phone, _questionAnsOne, _questionAnsTwo, _questionAnsThree,
-                                             _houseOrBuildingOrFlatNumber, _streetNameOrNumber, _cityOrAreaName, _postalCode);
-
-           
-              
             this.Hide();
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
-            
         }
 
-       
         private bool IsValidEmail(string email)
         {
             try
