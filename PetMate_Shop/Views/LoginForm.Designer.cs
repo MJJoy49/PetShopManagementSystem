@@ -121,10 +121,10 @@
             // applicationLogo
             // 
             this.applicationLogo.Image = ((System.Drawing.Image)(resources.GetObject("applicationLogo.Image")));
-            this.applicationLogo.Location = new System.Drawing.Point(64, 335);
+            this.applicationLogo.Location = new System.Drawing.Point(135, 387);
             this.applicationLogo.Name = "applicationLogo";
-            this.applicationLogo.Size = new System.Drawing.Size(287, 225);
-            this.applicationLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.applicationLogo.Size = new System.Drawing.Size(134, 126);
+            this.applicationLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.applicationLogo.TabIndex = 0;
             this.applicationLogo.TabStop = false;
             // 
@@ -235,10 +235,10 @@
             // passwordLogo
             // 
             this.passwordLogo.Image = ((System.Drawing.Image)(resources.GetObject("passwordLogo.Image")));
-            this.passwordLogo.Location = new System.Drawing.Point(741, 520);
+            this.passwordLogo.Location = new System.Drawing.Point(761, 524);
             this.passwordLogo.Name = "passwordLogo";
-            this.passwordLogo.Size = new System.Drawing.Size(45, 39);
-            this.passwordLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.passwordLogo.Size = new System.Drawing.Size(25, 25);
+            this.passwordLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.passwordLogo.TabIndex = 8;
             this.passwordLogo.TabStop = false;
             // 
