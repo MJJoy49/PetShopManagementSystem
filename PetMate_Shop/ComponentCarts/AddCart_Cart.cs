@@ -112,13 +112,15 @@ namespace PetMate_Shop.ComponentCarts
 
         private void DeleteToAddCartBtn_Click(object sender, EventArgs e)
         {
-            string deleteQuery = "DELETE FROM AddCart WHERE CartID = @CartID";
+            string deleteQuery = "DELETE FROM AddCart WHERE CartID = @CartID AND CustomerID = @CustomerID AND ItemID = @ItemID";
             var connection = DatabaseConnection.GetConnection();
             try
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand(deleteQuery, connection);
                 command.Parameters.AddWithValue("@CartID", _cartId);
+                command.Parameters.AddWithValue("@CustomerID", _customerId);
+                command.Parameters.AddWithValue("@ItemID", _itemId);
                 int rowsAffected = command.ExecuteNonQuery();
                 if (rowsAffected > 0)
                 {
@@ -138,6 +140,7 @@ namespace PetMate_Shop.ComponentCarts
                 MessageBox.Show("An error occurred while deleting the item: " + ex.Message);
             }
         }
+
 
         private void quantityUpBtn_Click(object sender, EventArgs e)
         {
