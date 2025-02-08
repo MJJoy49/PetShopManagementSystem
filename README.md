@@ -1,4 +1,4 @@
-# Petmate Project
+# Pet-Shop Management System
 
 ## AMERICAN INTERNATIONAL UNIVERSITY–BANGLADESH (AIUB)  
 ### Dept. of Computer Science, Faculty of Science and Technology  
