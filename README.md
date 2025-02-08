@@ -107,15 +107,11 @@ Key features include **secure login, real-time notifications, help & support sys
 - **Activity Diagram**
 - **Schema Diagram** (User, Admin, Customer, Employee, Volunteer, Help Requests, Notifications, Pets, Accessories, Orders, Payments, Adoptions, Favorites)
 
----
-
-## Project Repository
-[GitHub Repository](https://github.com/MJJoy49/PetShopManagementSystem)
 
 ---
 
 ## License
-This project is for academic purposes and is licensed under AIUB's guidelines.
+This project is for academic purposes 
 
 ---
 
